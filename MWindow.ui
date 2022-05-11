@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>845</width>
+    <height>580</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,53 +17,59 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>250</y>
-      <width>351</width>
-      <height>41</height>
+      <x>190</x>
+      <y>200</y>
+      <width>421</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>Управление датчиками(+)</string>
+     <string>Управление датчиками</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>200</y>
-      <width>351</width>
-      <height>31</height>
+      <x>190</x>
+      <y>110</y>
+      <width>421</width>
+      <height>61</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="text">
-     <string>Выход(+)</string>
+     <string>Выход</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>300</y>
-      <width>351</width>
-      <height>41</height>
+      <x>190</x>
+      <y>290</y>
+      <width>421</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>Настройка получаемой информации(-)</string>
+     <string>Настройка получаемой информации</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>350</y>
-      <width>351</width>
-      <height>41</height>
+      <x>190</x>
+      <y>380</y>
+      <width>421</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>Получение информации с датчиков(+-)</string>
+     <string>Получение информации с датчиков</string>
     </property>
    </widget>
   </widget>
@@ -72,7 +78,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>845</width>
      <height>26</height>
     </rect>
    </property>
