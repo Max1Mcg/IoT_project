@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 6.0.2, 2022-05-04T23:26:57. -->
+<!-- Written by QtCreator 6.0.2, 2022-05-10T16:45:23. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -175,6 +175,7 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">C:/Users/leggo/Documents/IoT_projetct_GUI/read_sensors.py</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/leggo/Documents/IoT_projetct_GUI/read_sensors.py</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/leggo/Documents/IoT_projetct_GUI/read_sensors.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{4cd0b91f-071c-4a2a-b6f7-5e756acb5cc5}</value>
     <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\leggo\Documents\IoT_projetct_GUI\read_sensors.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
@@ -189,10 +190,11 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">C:/Users/leggo/Documents/IoT_projetct_GUI/data_from_sensors.py</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/leggo/Documents/IoT_projetct_GUI/data_from_sensors.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/leggo/Documents/IoT_projetct_GUI/data_from_sensors.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\leggo\Documents\IoT_projetct_GUI\data_from_sensors.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">C:/Users/leggo/Documents/IoT_projetct_GUI/get_info.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/leggo/Documents/IoT_projetct_GUI/get_info.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/leggo/Documents/IoT_projetct_GUI/get_info.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{4176da61-ca6b-4f71-8116-cc193c9d9f97}</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\leggo\Documents\IoT_projetct_GUI\get_info.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
@@ -206,17 +208,35 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">C:/Users/leggo/Documents/IoT_projetct_GUI/get_info.py</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/leggo/Documents/IoT_projetct_GUI/get_info.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/leggo/Documents/IoT_projetct_GUI/get_info.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\leggo\Documents\IoT_projetct_GUI\get_info.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">C:/Users/leggo/Documents/IoT_projetct_GUI/params_settings.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/leggo/Documents/IoT_projetct_GUI/params_settings.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/leggo/Documents/IoT_projetct_GUI/params_settings.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{db9d90b0-1342-4d1d-b484-4154026b222a}</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\leggo\Documents\IoT_projetct_GUI\params_settings.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/leggo/Documents/IoT_projetct_GUI</value>
    </valuemap>
-   <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">6</value>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.6">
+    <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
+    <value type="bool" key="Analyzer.QmlProfiler.Settings.UseGlobalSettings">true</value>
+    <value type="bool" key="Analyzer.Valgrind.Settings.UseGlobalSettings">true</value>
+    <valuelist type="QVariantList" key="CustomOutputParsers"/>
+    <value type="int" key="PE.EnvironmentAspect.Base">2</value>
+    <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">C:/Users/leggo/Documents/IoT_projetct_GUI/ExitMessage.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/leggo/Documents/IoT_projetct_GUI/ExitMessage.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/leggo/Documents/IoT_projetct_GUI/ExitMessage.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\leggo\Documents\IoT_projetct_GUI\ExitMessage.py</value>
+    <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
+    <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
+    <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
+    <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/leggo/Documents/IoT_projetct_GUI</value>
+   </valuemap>
+   <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">7</value>
   </valuemap>
  </data>
  <data>
