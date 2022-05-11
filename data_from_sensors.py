@@ -7,7 +7,8 @@ class data_from_sensors(QWidget):
         uic.loadUi("data_from_sensors.ui", self)
 
         self.pushButton.clicked.connect(self.close)
-        self.pushButton_2.clicked.connect(self.show_params)
-    def show_params(self):
-        pass
-
+        self.pushButton_2.clicked.connect(lambda: self.show_params(params))
+    def show_params(self, params):
+        result = ""
+        for i in params:
+            pass

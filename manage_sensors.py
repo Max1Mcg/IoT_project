@@ -1,5 +1,5 @@
 from PyQt5 import  uic, QtGui, QtCore, QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QPushButton, QDialogButtonBox, QWidget, QTextBrowser
+from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QPushButton, QDialogButtonBox, QWidget, QTextBrowser, QErrorMessage
 import  sys
 import requests
 import urllib3
@@ -25,11 +25,30 @@ class manage_sensors(QWidget):
         self.temp_widget = read_sensors()
         self.temp_widget.pushButton.clicked.connect(lambda: self.delete_sensors(devices))
     def add_sensors(self, devices):
-        for i in self.temp_widget.sensors_numbers:
-            devices.append(int(i))
+        try:
+            for i in self.temp_widget.sensors_numbers:
+                devices.append(int(i))
+        except Exception:
+            self.em = QErrorMessage(self)
+            self.em.setWindowModality(QtCore.Qt.ApplicationModal)
+            self.em.setWindowTitle('Ошибка')
+            self.em.showMessage('Некорректный ввод номера. Номерами являются натуральные числа, вводимые через пробел.')
+            self.em.show()
     def delete_sensors(self, devices):
-        for i in self.temp_widget.sensors_numbers:
-            devices.remove(int(i))
+        try:
+            for i in self.temp_widget.sensors_numbers:
+                devices.remove(int(i))
+        except Exception:
+            self.em = QErrorMessage(self)
+            self.em.setWindowModality(QtCore.Qt.ApplicationModal)
+            self.em.setWindowTitle('Ошибка')
+            err_text = ""
+            if len(devices) == 0:
+                err_text = 'Невозможно удалить элемент из пустого списка'
+            else:
+                err_text = 'Введённого номера датчика нет в списке'
+            self.em.showMessage(err_text)
+            self.em.show()
     def display_sensors(self, devices):
         self.temp_widget = QTextBrowser()
         str_for_display = ""
