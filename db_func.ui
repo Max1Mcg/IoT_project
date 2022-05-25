@@ -6,47 +6,50 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1048</width>
-    <height>518</height>
+    <width>754</width>
+    <height>446</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>160</y>
-     <width>291</width>
-     <height>41</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>120</y>
-     <width>291</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Введите номера датчиков через пробел</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>230</y>
+     <x>160</x>
+     <y>170</y>
      <width>421</width>
      <height>61</height>
     </rect>
    </property>
    <property name="text">
-    <string>Ввод</string>
+    <string>Очистить базы данных</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>260</y>
+     <width>421</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Вывод значений из базы данных</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_6">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>80</y>
+     <width>421</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Назад</string>
    </property>
   </widget>
  </widget>

@@ -49,7 +49,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>вывести отслеживаемых датчиков</string>
+    <string>вывести отслеживаемые датчики</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_4">

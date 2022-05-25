@@ -8,6 +8,7 @@ import hashlib
 import uuid
 import time
 from MWindow import MWindow
+import sqlite3
 
 #global variables
 urll = 'http://narodmon.ru/api'
@@ -19,97 +20,60 @@ payload = {
         'uuid': md5_app_id,
         'api_key': 'TTyEvZaZ92G7b',
         'lang': 'ru'
-    }
+}
 
 #on/off params
 params_new = {'id':True, 'name':True, 'my':True, 'owner':True, 'mac':True, 'cmd':True,
 'location':True, 'distance':True, 'time':True, 'liked':True, 'uptime':True,'site':True, 'photo':True, 'info':True, 'sensors':True}
 
-#menu
-def menu():
-    """
-    some test text for docs
-    """
-    work = True
-    while(work):
-        print('выберите действие')
-        print('0 - завершение работы')
-        print('1 - настройка получаемой информации с датчиков')
-        print('2 - управление датчиками')
-        print('3 - получение информации с датчиков')
-        move = input()
-        if(move == '0'):
-            print('Спасибо за использование!!!')
-            work = False
-        elif(move == '1'):
-            getting_info()
-        elif(move == '2'):
-            sensors()
-        elif(move == '3'):
-            pass
-            #get_values()
-        else:
-            print("Действие введено неверно, попробуйте ещё раз")
+"""Creating database module"""
+try:
+    #  Connecting to the database
+    sqlite_connection = sqlite3.connect('iot.db')
+    cursor = sqlite_connection.cursor()
 
-def getting_info():
-    print("0 - вернуться назад")
-    print("1 - вывод всех параметров")
-    print("2 - удаление параметров настроек вывода с датчиков")
-    print("3 - добавление параметров настроек вывода с датчиков")
-    move = -1
-    move = input()
-    if move == 0:
-        return
-    elif move == 1:
-        print("Введите через пробел номера параметров, которые вы хотите видеть при выводе информации")
-    elif move == 2:
-        print()#
-    elif move == 3:
-        print()#
-    else:
-        print("Действие введено неверно, попробуйте ещё раз")
+    sqlite_create_table_requests = '''CREATE TABLE requests (
+                                        id INT NOT NULL PRIMARY KEY,
+                                        date TIMESTAMP NOT NULL);'''
 
-#add/remove sensors
-def sensors():
-    while(True):
-        move = 0
-        print('0 - вернуться назад')
-        print('1 - вывести номера датчиков')
-        print('2 - удалить датчик')
-        print('3 - добавить датчик')
-        move = input()
-        number = -1
-        lst = []  # номера удаляемых датчиков
-        if(move == '0'):
-            break
-        elif (move == '1'):
-            if len(payload['devices']) != 0:
-                print("список датчиков для считывания информации:")
-                for i in payload['devices']:
-                    print(i, sep=" ")  # в одну строку сделать
-                continue
-            print("Список пуст!")
-        elif (move == '2'):
-            print("Введите датчик или список датчиков для удаления через пробел")
-            numbers = input()
-            lst = numbers.split()
-            for i in range(len(lst)):
-                lst[i] = int(lst[i])
-            try:
-                for i in range(len(lst)):
-                    payload['devices'].remove(lst[i])
-            except Exception:
-                print("Ошибка! Список датчиков пуст или введённый номера нет в списке!")
-        elif (move == '3'):
-            print("введите номер датчика")#добавить проверку на существования датчика на nm
-            number = input()
-            number = int(number)
-            payload['devices'].append(number)
-        else:
-            print("Действие введено неверно, попробуйте ещё раз")
+    sqlite_create_table_values = '''CREATE TABLE vals (
+                                        id INT NOT NULL PRIMARY KEY,
+                                        sensors_id INT NOT NULL,
+                                        requests_id INT NOT NULL,
+                                        val VARCHAR(150) NOT NULL,
+                                        parameter VARCHAR(150) NOT NULL,
+                                        FOREIGN KEY (requests_id) REFERENCES requests (id),
+                                        FOREIGN KEY (sensors_id) REFERENCES sensors (id));'''
 
-#if __name__ == "__main__":
-app = QApplication(sys.argv)
-UIWindow = MWindow(payload, params_new, urll)
-app.exec_()
+    sqlite_create_table_sensors = '''CREATE TABLE sensors (
+                                        id INT NOT NULL PRIMARY KEY,
+                                        id_owner INT NOT NULL);'''
+
+    cursor.execute(sqlite_create_table_requests)
+    cursor.execute(sqlite_create_table_values)
+    cursor.execute(sqlite_create_table_sensors)
+    sqlite_connection.commit()
+    cursor.close()
+
+except sqlite3.Error as error:
+    pass
+
+finally:
+    if sqlite_connection:
+        sqlite_connection.close()
+
+#инициализация списка значениями из БД
+sqlite_connection = sqlite3.connect('iot.db')
+cursor = sqlite_connection.cursor()
+cursor.execute('select * from sensors')
+res = cursor.fetchall()
+for i in res:
+    payload['devices'].append(i[0])
+cursor.close()
+sqlite_connection.close()
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    UIWindow = MWindow(payload, params_new, urll)
+    app.exec_()
 

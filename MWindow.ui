@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>200</y>
+      <x>210</x>
+      <y>140</y>
       <width>421</width>
       <height>61</height>
      </rect>
@@ -30,8 +30,8 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>110</y>
+      <x>210</x>
+      <y>50</y>
       <width>421</width>
       <height>61</height>
      </rect>
@@ -49,8 +49,8 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>290</y>
+      <x>210</x>
+      <y>230</y>
       <width>421</width>
       <height>61</height>
      </rect>
@@ -62,14 +62,27 @@
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>380</y>
+      <x>210</x>
+      <y>320</y>
       <width>421</width>
       <height>61</height>
      </rect>
     </property>
     <property name="text">
      <string>Получение информации с датчиков</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>410</y>
+      <width>421</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Базы данных</string>
     </property>
    </widget>
   </widget>
